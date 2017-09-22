@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 理想视口的代码  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <title>优惠券</title>
+
+    <!--<script src="/dist/js/del.js"></script>-->
+    <script src="/dist/js/del.js"></script>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/dist/css/less/stephen/discount.css">
+
+
+</head>
+
+<body>
+
+    <!--优惠券头部-->
+    <div class="discount_header clearfix">
+        <a href="/dist/index.html">
+            <i class="glyphicon glyphicon-menu-left"></i>
+            <span>优惠券</span>
+            <img src="/public/img/header_app.png" alt="">
+        </a>
+    </div>
+
+
+    <!--优惠券-->
+    <div class="discount clearfix">
+        <ul id="discount_nav">
+
+            <!--模板的坑-->
+        </ul>
+
+
+    </div>
+
+    <!--优惠券菜单-->
+    <div class="discount_menu clearfix ">
+        <a href="/dist/index.html">首页</a>&nbsp;&gt;&nbsp;
+        <a href="#">优惠券</a>
+    </div>
+
+    <!-- 底部 -->
+    <div class="mm_foot">
+        <div class="foot_top clearfix">
+            <a href="javascript:;">登录</a>
+            <a href="javascript:;">注册</a>
+            <a href="#">
+                <img src="/public/img/top.jpg" alt=""> 返回顶部
+            </a>
+        </div>
+        <div class="foot_footer">
+            <p>
+                <a href="javascript:;">手机APP下载</a>
+                <a href="javascript:;">慢慢买手机版</a> -- 掌上比价平台
+            </p>
+            <p> m.manmanbuy.com </p>
+        </div>
+    </div>
+    <!-- 底部 固定App下载 -->
+    <div class="mm_fix">
+        <a href="javascript:;">
+            <img src="/public/img/manmanbuydownload.png" alt="">
+        </a>
+    </div>
+    </div>
+
+</body>
+
+<!--优惠券模板-->
+<script id="discount_tpl" type="text/tpl">
+    {{each $data discount i}}
+    <li>
+        <a href="/dist/html/stephen/discount_nav.html?id={{discount.couponId}}&couponTitle={{discount.couponTitle}}">
+            <img src="{{discount.couponImg}}" alt=""><span>{{discount.couponTitle}}</span>
+        </a>
+    </li>
+    {{/each}}
+</script>
+<script src="/dist/js/stephen/discount.js"></script>
+
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>coudan</title>
+
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/dist/css/less/wje/coudanlist.css"/>
+
+</head>
+<body>
+<div class="header">
+    <div class="inner">
+        <div class="left">
+            <a href="/dist/index.html"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></a>
+        </div>
+        <div class="center">
+            <h2>凑单品</h2>
+        </div>
+    </div>
+    <div class="right"></div>
+</div>
+<div class="coudan-box">
+    <div class="list">
+        <div class="hd">
+            <div class="select clearfix">
+                <ul>
+                    <li class="cd-list" id='cd-shop'>
+                        <a href="#">京东</a>
+                        <span class="glyphicon glyphicon-triangle-bottom " aria-hidden="true"></span>
+                        <!--<span class="glyphicon glyphicon-triangle-top top" aria-hidden="true"></span>-->
+                    </li>
+                    <li class="cd-list" id='cd-area'>
+                        <a href="#">华北</a>
+                        <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
+                        <!--<span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span>-->
+                    </li>
+                    <li class="cd-list" id='cd-price'>
+                        <a href="#">全部价格</a>
+                        <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
+                        <!--<span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span>-->
+                    </li>
+                </ul>
+            </div>
+            <div class="search">
+                <i class="iconfont">&#xe609;</i>
+            </div>
+
+        </div>
+        <!--下拉列表-->
+        <!--思路：下拉列表采用绝对定位，目的：不遮挡商品列表-->
+        <div class="popshop">
+            <!-- 店铺下拉列表模板的坑-->
+
+        </div>
+        <div class="poparea">
+            <!-- 区域下拉列表的坑-->
+        </div>
+        <div class="popprice">
+            <ul>
+                <li><a href="javascript:;">全部价格</a></li>
+                <li><a href="javascript:;">1-3元</a></li>
+                <li><a href="javascript:;">3-5元</a></li>
+                <li><a href="javascript:;">5-10元</a></li>
+                <li><a href="javascript:;">10-15元</a></li>
+                <li><a href="javascript:;">15元以上</a></li>
+            </ul>
+        </div>
+        <!-- 凑单列表-->
+        <div class="bd clearfix">
+           <!--凑单列表模板的坑-->
+        </div>
+    </div>
+</div>
+
+<!--店铺下拉列表模板-->
+
+<script type="text/template" id="shop-tpl">
+    <ul>
+        {{each $data shop i}}
+        <li data-id="{{shop.shopId}}">
+            <a href="#" >{{shop.shopName}}</a>
+            <i class="iconfont">&#xe647;</i>
+        </li>
+        {{/each}}
+    </ul>
+</script>
+
+<!--区域下拉列表模板-->
+
+<script type="text/template" id="area-tpl">
+    <ul class="clearfix">
+        {{each $data area i}}
+        <li data-id="{{area.areaId}}">
+            <a href="#" >{{area.areaName}}</a>
+            <i class="iconfont">&#xe647;</i>
+        </li>
+        {{/each}}
+    </ul>
+</script>
+<!--凑单列表模板-->
+<script type="text/template" id="cd-list-tpl">
+    <ul>
+        {{each $data cdList i}}
+        <li><a href="javascript:;">
+            <div class="pic"><img src="{{cdList.productImg}}" alt=""/></div>
+            <div class="title">{{cdList.productName}}</div>
+            <div class="price">
+                <!--<i>&yen;</i>-->
+                <!--1.00-->
+                {{cdList.productPrice}}
+            </div>
+        </a></li>
+        {{/each}}
+    </ul>
+</script>
+<script src="/dist/js/del.js"></script>
+<script src='/dist/js/wje/coudanlist.js'></script>
+</body>
+</html>

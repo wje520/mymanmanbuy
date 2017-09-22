@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商城导航</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/dist/css/less/page-fa/mall_nav.css">
+</head>
+
+<body>
+    <!-- 外层 -->
+    <div class="view">
+        <!-- 商城导航头部 -->
+        <div class="mm_header">
+            <div class="header_left">
+                <a href="/dist/index.html" class="glyphicon glyphicon-chevron-left"></a>
+            </div>
+            <h1>商城导航</h1>
+            <div class="header_rApp">
+                <a href="javascript:;">
+                    <img src="/public/img/header_app.png" alt="手机app下载">
+                </a>
+            </div>
+        </div>
+        <!-- 导航链接列表 -->
+        <div class="mm_mall_nav clearfix">
+            <!-- 导航链接列表模板 -->
+        </div>
+
+        <!-- 底部导航条 -->
+        <div class="mm_foot_nav">
+            <a href="/dist/index.html">首页</a>
+            <span class="glyphicon glyphicon-arrow-right"></span>
+            <a href="javascript:;">商城导航</a>
+        </div>
+        <!--底部-->
+        <div class="mm_foot">
+            <div class="foot_top clearfix">
+                <a href="javascript:;">登录</a>
+                <a href="javascript:;">注册</a>
+                <a href="#">
+                    <img src="/public/img/top.jpg" alt=""> 返回顶部
+                </a>
+            </div>
+            <div class="foot_footer">
+                <p>
+                    <a href="javascript:;">手机APP下载</a>
+                    <a href="javascript:;">慢慢买手机版</a> -- 掌上比价平台
+                </p>
+                <p> m.manmanbuy.com </p>
+            </div>
+        </div>
+        <!-- 底部 固定App下载 -->
+        <div class="mm_fix">
+            <a href="javascript:;">
+                <img src="/public/img/manmanbuydownload.png" alt="">
+            </a>
+        </div>
+    </div>
+    <script type="text/template" id="mall_nav_tpl">
+        {{each $data links i}}
+        <a href="{{links.navHref}}">
+            <img src="{{@links.navImg}}" alt=""> {{links.navTitle}}
+        </a> {{/each}}
+    </script>
+    <script src="/dist/js/del.js"></script>
+    <script src="/dist/js/page-fa/mall_nav.js"></script>
+</body>
+
+</html>

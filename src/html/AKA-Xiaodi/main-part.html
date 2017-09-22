@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="/dist/css/less/AKA-Xiaodi/main-part.css">
+    <title>manmanbuy</title>
+
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div class="header">
+        <a href="/dist">
+            <i class="glyphicon glyphicon-menu-left"></i>
+            <span>省钱控-最新优惠</span>
+            <img src="/public/img/header_app.png" alt="">
+        </a>
+    </div>
+    <!-- 主体 -->
+    <div class="container-fluid view" id="w">
+        <div class="media">
+            <div class="media-left media-middle view-media">
+                <ul id="getmoneyctrl">
+                    <!-- 动态渲染坑 -->
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class=".container xd_page">
+        <!-- <div class="row">
+            <div class="col-xs-4 xd-page-up">
+                <a href="">上一页</a>
+            </div>
+            <div class="col-xs-4 xd-page-sel">
+                <select name="" value="" id="xd-select">
+                 
+                </select>
+            </div>
+            <div class="col-xs-4 xd-page-down">
+                <a href="">下一页</a>
+            </div>
+        </div> -->
+    </div>
+    <div class="mm_foot">
+        <div class="foot_top clearfix">
+            <a href="javascript:;">登录</a>
+            <a href="javascript:;">注册</a>
+            <a href="#">
+                <img src="/public/img/top.jpg" alt=""> 返回顶部
+            </a>
+        </div>
+        <div class="foot_footer">
+            <p>
+                <a href="javascript:;">手机APP下载</a>
+                <a href="javascript:;">慢慢买手机版</a> -- 掌上比价平台
+            </p>
+            <p> m.manmanbuy.com </p>
+        </div>
+    </div>
+</body>
+<script type="text/tpl" id="main-part-tpl">
+    {{ each $data value i }}
+    <li class="clearfix">
+        <a href="/dist/html/AKA-Xiaodi/main-edit.html?productid={{value.productId}}">
+            <div class="pic">
+                {{#value.productImgSm}}
+            </div>
+            <div class="media-body info">
+                <div class="title" id="productId">
+                    {{value.productName}}
+                    <span>{{value.productPinkage}}</span>
+                </div>
+                <div class="other">
+                    <span>{{ value.productFrom }} | {{value.productTime}}</span>
+                    <i>{{value.productComCount}}</i>
+                    <span class="glyphicon glyphicon-option-horizontal font"></span>
+                </div>
+            </div>
+        </a>
+    </li>
+    {{ /each }}
+</script>
+<script type="text/tpl" id="main-select-tpl">
+    <div class="row">
+        <div class="col-xs-4 xd-page-up" data-page="{{nowpage!=1?nowpage-1:1}}">
+            <a href="javascript:;">上一页</a>
+        </div>
+        <div class="col-xs-4 xd-page-sel">
+            <select id="xd-select">
+                <%for(var i=0;i<pageTotal;i++){%>
+                <option  value="{{i+1}}"  {{nowpage==i+1?'selected':''}} >{{ i+1 }}/{{pageTotal}}</option>
+                <%}%>
+            </select>
+        </div>
+        <div class="col-xs-4 xd-page-down" data-page="{{nowpage!=pageTotal?nowpage-(-1):pageTotal}}">
+            <a href="javascript:;">下一页</a>
+        </div>
+    </div>
+
+</script>
+<script src="/dist/js/del.js"></script>
+<script src="/dist/js/AKA-Xiaodi/main-part.js"></script>
+
+</html>

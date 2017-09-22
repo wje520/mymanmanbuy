@@ -1,0 +1,151 @@
+@import "base.less";
+
+// 优惠券头部
+.discount_header{
+  height: 50px;
+  line-height: 50px;
+  background:#f4483e;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  a{
+    color: #fff;
+    i{
+      font-size: 18px;
+    }
+    span{
+      display: inline-block;
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 50px;
+      text-align: center;
+      width: 80%;
+    }
+    img{
+      width: 50px;
+      height:50px;
+      float: right;
+    }
+  }
+}
+
+// 优惠券
+.discount{
+  width: 100%;
+  // height: 93px;
+  //  text-align: left;
+  margin: 10px auto;
+  // background-color:red;
+  ul{
+    li{
+      float: left;
+      border: 1px solid #eeeeee;
+    display: inline-block;
+    width: 118.33px;
+    height: 82px; 
+    margin: 5px 0 0 5px;
+    padding-top: 5px;
+    font-size: 12px;
+    text-align: center;
+    a{
+      width: 116.33px;
+      height: 75px;
+      img{
+       margin: 1px 0 2px 35px;
+        width: 50px;
+        height: 50px;
+      }
+      span{
+        color: #5a5a5a;
+        font-size: 12px;
+      }
+    }
+   
+    }
+   
+  }
+ 
+}
+
+
+//优惠券菜单
+.discount_menu{
+  background: -webkit-gradient(linear,0 0,0 100%,from(#ffffff),to(#ebebeb));
+  margin-top: 20px;
+  border-top: solid 1px #ebebeb;
+    border-bottom: 1px solid #ccc;
+    line-height: 36px;
+    padding-left: 8px;
+    
+     height: 36px;
+    line-height: 36px;
+    font-size: 14px;
+    background-color: #ebebeb;
+    color: #666;
+  a{
+   
+    display: inline-block;
+    // text-decoration: none;
+  }
+  a:visited{
+    color: black;
+    // text-decoration: none;
+  }
+}
+
+
+
+  /*底部*/
+    .mm_foot{
+      background-color:#efefef;
+      padding-top:10px;
+      .foot_top{
+          height: 36px;
+          border-top:1px solid #ccc;
+          border-bottom:1px solid #ccc;
+          color:#666;
+          >a{
+              float: left;
+              text-align: center;
+              line-height:36px;
+              border-right:1px solid #ccc;
+          }
+          >a:nth-child(1),a:nth-child(2){
+              width: 30%;
+          }
+          >a:nth-child(3){
+              width: 40%;
+              border-right:0;
+              >img{
+                  display:inline-block;
+                  vertical-align: middle;
+                  width: 14px;
+                  height: 14px;
+                  margin:-5px 2px 0 0;
+              }
+          }
+      }
+      .foot_footer{
+          padding:15px 0;
+          text-align: center;
+          color:#666;
+          >p:nth-child(1){
+              >a{
+                display:inline;
+              }
+              >a:nth-child(1){
+                  color:red;
+              }
+          }
+      }
+  }
+  /* 底部 固定App下载*/
+  .mm_fix{
+      width: 60px;
+      height: 68px;
+      position: fixed;
+      right: 0;
+      bottom:60px;
+      z-index: 666;
+      
+  }

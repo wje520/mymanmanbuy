@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="/dist/css/less/AKA-Xiaodi/main-edit.css">
+    <title>manmanbuy</title>
+</head>
+
+<body>
+    <div class="header">
+        <a href="/dist">
+            <i class="glyphicon glyphicon-menu-left"></i>
+            <span>省钱购国内折扣</span>
+            <img src="/public/img/header_app.png" alt="">
+        </a>
+    </div>
+    <div class="xd-content" id="product-tpl">
+        <!-- 商品详情的坑 -->
+
+
+    </div>
+    <div class="mm_foot">
+        <div class="foot_top clearfix">
+            <a href="javascript:;">登录</a>
+            <a href="javascript:;">注册</a>
+            <a href="#">
+                <img src="/dist/html/page-fa/images/top.jpg" alt=""> 返回顶部
+            </a>
+        </div>
+        <div class="foot_footer">
+            <p>
+                <a href="javascript:;">手机APP下载</a>
+                <a href="javascript:;">慢慢买手机版</a> -- 掌上比价平台
+            </p>
+            <p> m.manmanbuy.com </p>
+        </div>
+    </div>
+</body>
+<script type="text/tpl" id="ctrlproduc-tpl">
+
+    <h3 class="recommend">{{productName}}</h3>
+    <h4 class="pic">{{productPinkage}}</h4>
+    <div class="info">
+        <span class="mall">{{productFrom}}</span>
+        <span>{{productTime}}</span>
+        <span>{{productTips}}</span>
+    </div>
+    <div class="content-info">
+        <div class="pt">
+            {{#productImgSm}}
+        </div>
+        <div class="describe">
+
+            <div class="content-info-pic">
+                {{productInfo2}}
+            </div>
+            <div class="big-pt">
+                {{#productImg2}}
+            </div>
+            <div class="buy">
+                <a href=""><i class="glyphicon glyphicon-shopping-cart"></i>前往购买</a>
+            </div>
+            <div id="comment">
+                {{#productComment}}
+            </div>
+</script>
+
+<script src="/dist/js/del.js"></script>
+<script src="/dist/js/AKA-Xiaodi/main-edit.js"></script>
+
+</html>

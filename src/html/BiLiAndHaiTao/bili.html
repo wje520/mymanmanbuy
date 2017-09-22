@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>产品分类-慢慢买比价网</title>
+    <!--build:lv_csslink-->
+    <!--endbuild-->
+    <link rel="stylesheet" href="/dist/css/less/BiLiAndHaiTao/bili.css">
+</head>
+
+<body>
+<!--header-->
+<!--build:lv_header-->
+<!--endbuild-->
+
+<!--search-->
+<!--build:lv_search-->
+<!--endbuild-->
+
+
+<!--brief-->
+<div class="brief  container-fluid">
+    <!--getcategorytitle 坑 -->
+</div>
+
+
+<!--footer-->
+<!--build:lv_footer-->
+<!--endbuild-->
+
+
+<script type="text/tpl" id="getcategorytitle">
+
+    {{each $data value i}}
+        <div class="box">
+            <div class="drow row">
+                <a href="javascript:;" data-indexmunuld="{{value.titleId}}">
+                    <h3>{{value.title}}</h3>
+                </a>
+            </div>
+            <div class="row  title  titleId_{{value.titleId}}">
+                <!-- 下拉的坑-->
+            </div>
+        </div>
+    {{/each}}
+</script>
+
+<script type="text/tpl" id="getcategory">
+
+    {{each $data value i}}
+         <a href="/dist/html/BiLiAndHaiTao/productlist.html?categoryid={{value.categoryId}}" class="col-xs-4"  data-categoryId={{value.categoryId}} >{{value.category}}</a>
+    {{/each}}
+
+</script>
+
+<script src="/dist/js/del.js"></script>
+<script src="/dist/js/BiLiAndHaiTao/bili.js"></script>
+</body>
+</html>

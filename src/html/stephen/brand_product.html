@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 理想视口的代码  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <title>品牌排行</title>
+
+    <!--<script src="/dist/js/del.js"></script>-->
+    <script src="/dist/js/del.js"></script>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/dist/css/less/stephen/brand_product.css">
+
+
+</head>
+
+<body>
+    <!--顶部 logo-->
+    <div class="mm_header">
+        <div class="fl mm_logo">
+            <a href="/dist" title="慢慢买比价网--手机版">
+                <img src="/public/img/header_logo.png" alt="慢慢买比价网--手机版" />
+            </a>
+        </div>
+        <div class="fr appdown">
+            <a href="javascript:;">
+                <img src="/public/img/header_app.png" alt="手机app下载">
+            </a>
+        </div>
+    </div>
+    <!--头部搜索框-->
+    <div class="mm_search">
+        <div class="search_txt">
+            <input type="text" placeholder="请输入你想比价的商品" class="in_1">
+            <input type="submit" value="搜索" class="in_2">
+        </div>
+    </div>
+
+    <!--品牌大全菜单栏-->
+
+    <div class="brand_product_menu">
+
+
+    </div>
+    <script id="brand_product_tpl" type="text/tpl">
+        <a href="/dist/index.html">首页</a>&nbsp;&gt;
+        <a href="/dist/html/stephen/tenbrand.html">品牌大全</a>&nbsp;&gt;
+        <a href="#">平板电视哪个牌子好</a>
+    </script>
+
+
+
+
+    <div class="brand_box">
+        <!--坑-->
+    </div>
+    <script id="brand_compare_tpl" type="text/tpl">
+        <!--品牌牌子比较标题-->
+        <div class="brand_product_headline">
+            <h3>平板电视哪个牌子好</h3>
+        </div>
+        <!--品牌比较-->
+        <div class="brand_product_cpmpare clearfix">
+            <ul>
+                {{each $data brand_product i }}
+                <li>
+                    <em class="glyphicon glyphicon-chevron-right"></em>
+                    <a href="javascript:;">
+                        <span>{{i+1}}</span>
+                        <div class="inner">
+                            <div class="title">{{brand_product.brandName}}</div>
+                            <p>30天全网销量：{{brand_product.brandInfo}}</p>
+                        </div>
+                    </a>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+    </script>
+
+
+
+
+
+
+    <div class="brand_box2">
+
+    </div>
+
+    <script id="brand_product_introduct_tpl" type="text/tpl">
+        <!--品牌销售标题-->
+        <div class="brand_product_sales">
+            <h3>平板电视产品销量排行</h3>
+        </div>
+        <!--品牌详细介绍-->
+        <div class="brand_product_introduct clearfix">
+            <ul>
+                {{each $data brand_product_introduct i}}
+                <li>
+                    <a href="/dist/html/BiLiAndHaiTao/product.html?productid={{brand_product_introduct.productId}}">
+                        <div class="pic">
+                            {{#brand_product_introduct.productImg}}
+                        </div>
+                        <div class="info">
+                            <div class="tit">{{brand_product_introduct.productName}}</div>
+                            <div class="price">
+                                <em>{{brand_product_introduct.productPrice}}</em>
+                                <span>
+                              <em  class="glyphicon glyphicon-star"></em>
+                              <em  class="glyphicon glyphicon-star"></em>
+                              <em  class="glyphicon glyphicon-star"></em>
+                              <em  class="glyphicon glyphicon-star"></em>
+                              <em  class="glyphicon glyphicon-star"></em>
+                            </span>
+                            </div>
+                            <div class="other">
+                                <em>{{brand_product_introduct.productQuote}}</em>
+                                <em>{{brand_product_introduct.productCom}}</em>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+    </script>
+
+
+
+
+
+
+
+    <div class="brand_box3">
+        <!--坑-->
+    </div>
+
+    <script id="brand_comment_content_tpl" type="text/tpl">
+        <!--用户评论标题-->
+        <div class="brand_product_comment">
+            <h3>平板电视最有用的用户评论</h3>
+        </div>
+        <!--评论内容-->
+        <div class="brand_comment_content clearfix">
+            <ul>
+                {{each $data brand_comment_content i }}
+                <li>
+                    <a href="#">
+                        <div class="profit clearfix">
+                            <div class="pic">
+                                {{#brand_comment_content.productImg}}
+                            </div>
+                            <div class="tit">{{brand_comment_content.productName}}</div>
+                        </div>
+                    </a>
+                    <div class="content_box clearfix">
+                        <a href="/dist/html/stephen/grade.html?productid={{brand_comment_content.productId}}&num={{i}}">
+                            <div class="name">
+                                <em>{{brand_comment_content.comName}}</em>
+                                <span>
+                             <em  class="glyphicon glyphicon-star"></em>
+                              <em  class="glyphicon glyphicon-star"></em>
+                              <em  class="glyphicon glyphicon-star"></em>
+                              <em  class="glyphicon glyphicon-star"></em>
+                              <em  class="glyphicon glyphicon-star"></em>
+                            </span>
+                                <i>{{brand_comment_content.comTime}}</i>
+                            </div>
+                            <div class="con">
+                                {{brand_comment_content.comContent}}
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+    </script>
+
+
+
+
+
+
+
+
+
+    <div class="brand_box4">
+        <!--最新评论标题  -->
+        <div class="new_comment">
+            <h3>平板电视最新评论</h3>
+        </div>
+
+        <!--最新评论内容-->
+        <div class="new_comment_content clearfix">
+            <ul>
+                <li>
+                    <a href="#">
+                        <div class="profit clearfix">
+                            <div class="pic">
+                                <img src="/public/img/Thumb_2016090010575512663.jpg" alt="">
+                            </div>
+                            <div class="tit">
+                                酷开(coocaa) 55A2 55英寸 4K超高清 HDR智能液晶合体电视
+                            </div>
+                        </div>
+                    </a>
+                    <div class="new_comment_box clearfix">
+                        <a href="#">
+                            <div class="name">
+                                <em>龙***薯：</em>
+                                <span>
+                              <em  class="glyphicon glyphicon-star"></em>
+                              <em  class="glyphicon glyphicon-star"></em>
+                              <em  class="glyphicon glyphicon-star"></em>
+                              <em  class="glyphicon glyphicon-star"></em>
+                              <em  class="glyphicon glyphicon-star"></em>
+                            </span>
+                                <i>2017/9/18</i>
+                            </div>
+                            <div class="con">很不错，音质好，电视清晰，选了好久最终决定还是买这一款，满意！</div>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- 底部 -->
+    <div class="mm_foot">
+        <div class="foot_top clearfix">
+            <a href="javascript:;">登录</a>
+            <a href="javascript:;">注册</a>
+            <a href="#">
+                <img src="/public/img/top.jpg" alt=""> 返回顶部
+            </a>
+        </div>
+        <div class="foot_footer">
+            <p>
+                <a href="javascript:;">手机APP下载</a>
+                <a href="javascript:;">慢慢买手机版</a> -- 掌上比价平台
+            </p>
+            <p> m.manmanbuy.com </p>
+        </div>
+    </div>
+    <!-- 底部 固定App下载 -->
+    <div class="mm_fix">
+        <a href="javascript:;">
+            <img src="/public/img/manmanbuydownload.png" alt="">
+        </a>
+    </div>
+    </div>
+
+</body>
+
+
+
+
+
+
+
+
+
+<script src="/dist/js/stephen/brand_product.js"></script>
+
+</html>

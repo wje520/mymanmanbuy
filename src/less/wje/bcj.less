@@ -1,0 +1,305 @@
+@import "../base.less";
+//字体图标
+@font-face {
+  font-family: 'iconfont';
+  src: url('/font/iconfont.eot');
+  src: url('/font/iconfont.eot?#iefix') format('embedded-opentype'),
+  url('/font/iconfont.woff') format('woff'),
+  url('/font/iconfont.ttf') format('truetype'),
+  url('/font/iconfont.svg#iconfont') format('svg');
+}
+.iconfont{
+  font-family:"iconfont" !important;
+  font-size:16px;font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.header {
+  background-color: #ff8b00;
+  width: 100%;
+  height: 44px;
+  position: relative;
+  box-shadow: 0px 0px 2px 2px #ddd;
+  .inner {
+    .left {
+      a {
+        span {
+          display: block;
+          width: 44px;
+          height: 44px;
+          line-height: 44px;
+          text-align: center;
+          font-size: 20px;
+          color: #fff;
+          position: absolute;
+          top: 0;
+          left: 8px;
+        }
+      }
+
+    }
+    .center {
+      h2 {
+        //line-height: 22px;
+        float: left;
+        text-align: center;
+        color: #fff;
+        font-size: 20px;
+        font-weight: 600;
+        font-family:  "Microsoft YaHei";
+        position: absolute;
+        top: 20%;
+        left: 30%
+      }
+    }
+    .download {
+      img {
+        width: 34px;
+        height: 34px;
+        position: absolute;
+        top: 5px;
+        right: 8px;
+      }
+    }
+
+  }
+}
+//顶部导航
+.bcj-hd {
+  width: 100%;
+  height: 36px;
+  position: relative;
+  border-bottom: 3px solid #f7f7f7;
+  .bcj-title {
+    overflow: hidden;
+    ul {
+      position: relative;
+      width: 760px;
+      height: 36px;
+      li {
+        float: left;
+        border-bottom: 2px solid #fff;
+        a {
+          color: #333;
+          display: inline-block;
+          padding: 0 12px;  //用padding来挤出相同的间距
+          height: 36px;
+          width: auto;
+          line-height: 36px;
+          text-align: center;
+          font-size: 14px;
+          font-family: '微软雅黑';
+          box-sizing: content-box;
+        }
+      }
+      .active {
+        border-color: red;
+
+      }
+    }
+  }
+  .bcj-search {
+    i {
+      background-color: #fff;
+      display: inline-block;
+      width: 32px;
+      height: 32px;
+      line-height: 38px;
+      text-align: center;
+      font-size: 20px;
+      border-left: 1px solid #e6e6e6;
+      position: absolute;
+      top: 1px;
+      right: 0;
+    }
+  }
+}
+//白菜价列表
+.bcj-body {
+  .bcj-list {
+    ul {
+      li {
+        padding-top: 10px;
+        padding-left: 5px;
+        border-bottom: 5px solid #f7f7f7;
+
+        height: 150px;
+
+        .media {
+          height: 100%;
+          .media-left {
+            //height: 150px;
+            //display: inline-block;
+            //overflow: hidden;
+            //float: left;
+
+            a {
+              img {
+                width: 130px;
+                height: 130px;
+              }
+            }
+          }
+          .media-body {
+            //float: left;
+            //margin-left: 15px;
+            //height: 100%;
+            //width: 59%;
+
+            h4 {
+              font-size: 14px;
+              font-family: "微软雅黑";
+              color: #000;
+              margin-bottom: 7px;
+              height: 35px;
+              overflow: hidden;
+            }
+            .bjc-price {
+              color: red;
+              font-size: 24px;
+              margin-bottom: 16px;
+              i  {
+                font-size: 16px;
+                vertical-align: baseline;
+                font-family: "微软雅黑";
+              }
+              em {
+                font-size: 12px;
+                vertical-align: middle;
+                font-family: "微软雅黑";
+              }
+              del {
+                font-size: 13px;
+                color: #a8a8a8;
+                vertical-align: middle;
+                font-family: "微软雅黑";
+                margin-left: 12px;
+              }
+            }
+            .bcj-progress {
+              position: relative;
+              //外层
+               i{
+                display: inline-block;
+                border-radius: 7px;
+                height: 14px;
+                border: 1px solid #fc353a;
+                width: 80px;
+                font-weight: 600;
+                background-color: #ffb7b7;
+                margin-top: -5px;
+               em {
+                 background-color: red;
+                  display: inline-block;
+                  border-radius: 7px;
+                  height: 12px;
+                  line-height: 12px;
+
+                }
+                 span {
+                   font-size: 12px;
+                   font-style: oblique;
+                   color: #fff;
+                   font-style: oblique;
+                   font-weight: 900;
+                   position: absolute;
+                   top: -4px;
+                   left: 30px;
+                 }
+              }
+              b {
+                font-weight: normal;
+                color: #e4393c;
+                vertical-align: 3px;
+                position: absolute;
+                top: -7px;
+                left: 92px;
+              }
+            }
+            .bcj-coupon {
+              position: relative;
+              a {
+                float: left;
+                color: #e4393c;
+                display: inline-block;
+                height: 26px;
+                line-height: 26px;
+                border: 1px dotted #e4393c;
+                padding: 0 4px;
+              }
+            }
+            .bcj-link {
+              position: relative;
+              a {
+                float: right;
+                display: block;
+                height: 28px;
+                line-height: 28px;
+                text-align: center;
+                font-size: 12px;
+                background-color: #ff5e5d;
+                color: #fff;
+                border-radius: 4px;
+                padding: 0 3px;
+                position: absolute;
+                top: 0px;
+                right: 4px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+footer {
+  background-color: #f7f7f7;
+  .bcj-otherfun {
+    ul {
+      li {
+        float: left;
+        width: 33.33%;
+        height: 30px;
+        line-height: 30px;
+        border: 1px solid #d5d5d5;
+        text-align: center;
+        a {
+          //display: inline-block;
+          font-family: "微软雅黑";
+          color:#fc353a ;
+        }
+      }
+    }
+  }
+  .bcj-other {
+    text-align: center;
+    position: relative;
+    p:nth-child(1) {
+      padding-top: 15px;
+      a {
+        color: red;
+      }
+    }
+    p:nth-child(2){
+      padding-top: 15px;
+    }
+    .btntop {
+      a:hover {
+        //color: #666;
+      }
+      i {
+        position: fixed;
+        right: 10px;
+        bottom: 32px;
+        display: inline-block;
+        //width: 36px;
+        //height: 36px;
+        font-size: 34px;
+      }
+    }
+
+  }
+
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>产品分类-慢慢买比价网</title>
+    <!--build:lv_csslink-->
+    <!--endbuild-->
+    <link rel="stylesheet" href="/dist/css/less/BiLiAndHaiTao/product.css">
+</head>
+
+<body>
+<!--header-->
+<!--build:lv_header-->
+<!--endbuild-->
+
+<!--search-->
+<!--build:lv_search-->
+<!--endbuild-->
+
+
+<div class="nav">
+    <!-- 导航栏的坑-->
+</div>
+
+
+<div class="show">
+    <!-- 商品详情的坑-->
+</div>
+<div class="pinglun">
+    <div>优选网友评价</div>
+    <!-- 评论的坑-->
+</div>
+
+<!--footer-->
+<!--build:lv_footer-->
+<!--endbuild-->
+
+
+<script type="text/tpl" id="nav">
+    <a href="/dist/index.html" class="f12">首页</a> &gt;
+    <a href="/dist/html/BiLiAndHaiTao/productlist.html?categoryid={{categoryId}}" class="f12">{{category}}</a>&gt;
+    <a href="#" class="f12">{{productName}}</a>
+</script>
+
+
+<script type="text/tpl" id="show">
+
+    <h1>{{productName}}</h1>
+    {{@productImg}}
+
+    <div class="row">
+        <a href="javascript:;" class="col-xs-4 ">比价购买</a>
+        <a href="javascript:;" class="col-xs-4 ">商品参数</a>
+        <a href="javascript:;" class="col-xs-4 ">优选评价</a>
+    </div>
+    <div>{{@bjShop}}</div>
+    <div id="text">* 实际价格以各网站列出的实时售价为准,我们提供的价格可能有数小时至数日的延迟</div>
+
+</script>
+
+<script type="text/tpl" id="pinglun-tpl">
+{{each $data value i}}
+    <div class="one clearfix">
+        <div class="fl">{{value.comName}}</div>
+        <div class="fr">{{value.comTime}}</div>
+    </div>
+    <div class="two clearfix">
+        <div class="star fl"></div>
+        <div class="fr">{{value.comFrom}}</div>
+    </div>
+    <div class="Content">
+        <div>
+            <p>{{value.comContent}}</p>
+        </div>
+        <div><a href="#">回复</a></div>
+    </div>
+{{/each}}
+</script>
+
+
+
+<script src="/dist/js/del.js"></script>
+<script src="/dist/js/BiLiAndHaiTao/product.js"></script>
+</body>
+</html>

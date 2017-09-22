@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>manmanbuy</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="/dist/css/less/AKA-Xiaodi/discount.css">
+
+</head>
+
+
+<body>
+    <!-- 头部 -->
+     <div class="mm_header">
+            <div class="header_left">
+                <a href="/dist/index.html" class="glyphicon glyphicon-chevron-left"></a>
+            </div>
+            <h1>国内折扣</h1>
+            <div class="header_rApp">
+                <a href="javascript:;">
+                    <img src="/public/img/header_app.png" alt="手机app下载">
+                </a>
+            </div>
+        </div>
+    <!-- 主体 -->
+    <div>
+        <div class="content" id="discount-add">
+            <ul class="content-ul clearfix">
+                <!-- 动态渲染坑 -->
+            </ul>
+        </div>
+    </div>
+    <!-- 尾部 -->
+    <div class="mm_foot">
+        <div class="foot_top clearfix">
+            <a href="javascript:;">登录</a>
+            <a href="javascript:;">注册</a>
+            <a href="#">
+                <img src="/public/img/top.jpg" alt=""> 返回顶部
+            </a>
+        </div>
+        <div class="foot_footer">
+            <p>
+                <a href="javascript:;">手机APP下载</a>
+                <a href="javascript:;">慢慢买手机版</a> -- 掌上比价平台
+            </p>
+            <p>m.manmanbuy.com </p>
+        </div>
+    </div>
+</body>
+<script type="text/tpl" id="discount-tpl">
+    {{ each result as value i }}
+    <li class="content-li ">
+        <a href="/dist/html/AKA-Xiaodi/discount-edit.html?productid={{value.productId}}" class="content_href">
+            <div class="content_pt">
+                {{#value.productImg}}
+            </div>
+            <div class="title">
+                {{ value.productName }}
+            </div>
+            <div class="pic ">{{ value.productPrice }}</div>
+            <div class="info">{{value.productFrom}} | {{value.productTime}}</div>
+        </a>
+    </li>
+    {{ /each }}
+</script>
+<script src="/dist/js/del.js"></script>
+<script src="/dist/js/AKA-Xiaodi/discount.js"></script>
+
+</html>

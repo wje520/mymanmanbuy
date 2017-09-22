@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="/dist/css/less/AKA-Xiaodi/discount-edit.css">
+    <title>manmanbuy</title>
+</head>
+
+<body>
+    <div class="header">
+        <a href="/dist">
+            <i class="glyphicon glyphicon-menu-left"></i>
+            <span>国内折扣</span>
+            <img src="/public/img/header_app.png" alt="">
+        </a>
+    </div>
+    <div class="content" id="product-edit">
+        <!-- <h3 class="recommend">移动端凑单品：海天 鲜味 生抽 1.28L</h3>
+        <h4 class="pic">5元</h4>
+        <div class="info">
+            <span class="mall">京东商城</span>
+            <span>10-25 | 14:10</span>
+            <span>小编烟火/慢慢买</span>
+        </div>
+        <div class="content-info clearfix">
+            <div class="xd-content-img"><img src="/public/AKA-XiaodiImage/2017090014323023918.png" alt=""></div>
+            <div class="describe">
+                西班牙进口，100%从天然葡萄籽中获得，天然健康，无添加剂，无污染，每100克含维他命E20毫克。 京东目前报价69元，下2件可参加2件5折活动，折34.5元/件，近期好价，有需要的朋友可以考虑入手。
+            </div>
+        </div>
+        <div class="buy">
+            <a href="">
+                <i class="glyphicon glyphicon-shopping-cart"></i>前往购买
+            </a>
+        </div>
+        <div class="comment"></div>
+ -->
+
+    </div>
+    <div class="mm_foot">
+        <div class="foot_top clearfix">
+            <a href="javascript:;">登录</a>
+            <a href="javascript:;">注册</a>
+            <a href="#">
+                <img src="/dist/html/page-fa/images/top.jpg" alt=""> 返回顶部
+            </a>
+        </div>
+        <div class="foot_footer">
+            <p>
+                <a href="javascript:;">手机APP下载</a>
+                <a href="javascript:;">慢慢买手机版</a> -- 掌上比价平台
+            </p>
+            <p> m.manmanbuy.com </p>
+        </div>
+    </div>
+</body>
+<script type="text/tpl" id="discount-edit-tpl">
+    <h3 class="recommend">{{productName}}</h3>
+    <h4 class="pic">{{productPrice}}</h4>
+    <div class="info">
+        <span class="mall">{{productFrom}}</span>
+        <span>{{productTime}}</span>
+        <span>{{productTips}}</span>
+    </div>
+    <div class="content-info clearfix">
+        <div class="pt ">
+            {{#productImg}}
+        </div>
+        <div class="describe">
+            {{productInfo}}
+        </div>
+    </div>
+    <div class="xd-buy">
+        <a href=""><i class="glyphicon glyphicon-shopping-cart"></i>前往购买</a>
+    </div>
+    <div class="comment">
+        {{@productComment}}
+    </div>
+</script>
+<script src="/dist/js/del.js"></script>
+<script src="/dist/js/AKA-Xiaodi/discount-edit.js"></script>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>产品分类-慢慢买比价网</title>
+    <!--build:lv_csslink-->
+    <!--endbuild-->
+    <link rel="stylesheet" href="/dist/css/less/BiLiAndHaiTao/productlist.css">
+</head>
+
+<body>
+    <!--header-->
+    <!--build:lv_header-->
+    <!--endbuild-->
+
+    <!--search-->
+    <!--build:lv_search-->
+    <!--endbuild-->
+
+
+    <div class="nav">
+        <!-- 导航栏的坑-->
+    </div>
+
+
+    <div class="product-list"  >
+        <!-- 商品列表的坑-->
+    </div>
+
+    <div class="page container-fluid">
+
+        <!-- 商品页-->
+    </div>
+
+    <!--footer-->
+    <!--build:lv_footer-->
+    <!--endbuild-->
+
+
+<script type="text/tpl" id="nav">
+    <a href="/dist/index.html" class="f12">首页</a> &gt;
+    <a href="/dist/html/BiLiAndHaiTao/bili.html" class="f12">全部分类</a>&gt;
+    <a href="#" class="f12">{{category}}</a>
+</script>
+
+
+
+<script type="text/tpl" id="product-list">
+{{each $data value i}}
+    <div class="media">
+        <a href="/dist/html/BiLiAndHaiTao/product.html?productid={{value.productId}}">
+            <div class="media-left media-middle">
+                {{@value.productImg}}
+            </div>
+            <div class="media-body">
+                <h4 class="media-heading">{{value.productName}}</h4>
+                <div class="pay">{{value.productPrice}}</div>
+                <div class="pinglung">
+                    <span>{{value.productQuote}}</span>
+                    <span>{{value.productCom}}</span>
+                </div>
+            </div>
+        </a>
+    </div>
+{{/each}}
+</script>
+
+<script type="text/tpl" id="page-tpl">
+    <div class="row">
+
+        <div id="lastpage" data-page={{nowpage!=1?nowpage-1:nowpage}}
+        class="col-xs-4" style="{{nowpage==1?'visibility: hidden':''}}">
+            <a href="javascript:;">上一页</a>
+        </div>
+
+        <select  id="selectpage" class="col-xs-4" name="page" >
+        <!-- 这里有个问题,另外一种写法不行-->
+            <% for(var i = 0; i < maxpage; i++){ %>
+
+                <option  value="{{i+1}}" {{nowpage==i+1?'selected':''}}>{{i+1}}/{{maxpage}}</option>
+
+            <% } %>
+
+        </select>
+        <!--这里有个问题:就是模板是用加法时候，是被当做字符串进行拼接的！-->
+        <div id="nextpage" data-page={{nowpage!=maxpage?nowpage-(-1):nowpage}}
+         class="col-xs-4"  style="{{nowpage==maxpage?'visibility: hidden':''}}" >
+            <a href="javascript:;">下一页</a>
+        </div>
+
+    </div>
+</script>
+
+<script src="/dist/js/del.js"></script>
+<script src="/dist/js/BiLiAndHaiTao/productlist.js"></script>
+</body>
+</html>

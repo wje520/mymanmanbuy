@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>baicaijia</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/dist/css/less/wje/bcj.css"/>
+</head>
+<body>
+<div class="header clearfix">
+    <div class="inner">
+        <div class="left">
+            <a href="/dist/index.html"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></a>
+        </div>
+        <div class="center">
+            <h2>白菜价-淘宝内部券</h2>
+        </div>
+        <a href="javascript:;" class="download"><img src="/public/img/header_app.png" alt=""/></a>
+    </div>
+</div>
+<div class="bcj-hd clearfix">
+    <div class="bcj-title" id="wrapper">
+        <ul class="bcj-tab ">
+
+            <!--标题模板的坑-->
+        </ul>
+    </div>
+    <div class="bcj-search">
+        <i class="iconfont">&#xe609;</i>
+    </div>
+</div>
+<div class="bcj-body clearfix">
+    <div class="bcj-list">
+        <!--列表模板的坑-->
+    </div>
+</div>
+<footer>
+    <div class="bcj-otherfun clearfix">
+        <ul>
+            <li><a href="javascript:;">登陆</a></li>
+            <li><a href="javascript:;">注册</a></li>
+            <li class="totop"><a href="javascript:window.scrollTo(0,0)">返回顶部</a></li>
+        </ul>
+    </div>
+    <div class="bcj-other">
+        <p><a href="javascript:;">手机APP下载</a>
+            慢慢买手机版 -- 掌上比价平台
+        </p>
+
+        <p>m.manmanbuy.com</p>
+        <a href="javascript:window.scrollTo(0,0)" class="btntop">
+            <i class="iconfont">&#xe663;</i>
+        </a>
+
+    </div>
+
+</footer>
+
+<!--标题模板-->
+<script type="text/template" id="bcj-title-tpl">
+
+    {{each $data bt i}}
+    <!--注意data-id是属性，不是class-->
+        <li class="tab-item" data-id={{bt.titleId}}><a href="javascript:;">{{bt.title}}</a></li>
+
+    {{/each}}
+</script>
+<!--列表模板-->
+<script type="text/template" id="bcj-list-tpl">
+    <ul>
+        {{each $data bcjList i}}
+        <li>
+            <div class="media">
+                <div class="media-left">
+                    <a href="#">
+                        <!--<img class="media-object" src="{{@bcjList.productImg}}">-->
+                        {{@bcjList.productImg}}
+                    </a>
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading">{{@ bcjList.productName}}</h4>
+
+                    <div class="bjc-price">
+                        <!--<em></em>-->
+                        <!--<span></span>-->
+                        <!--<del></del>-->
+                        {{@bcjList.productPrice}}
+                    </div>
+                    <div class="bcj-progress clearfix">
+                        <!--<div class="progress">-->
+                        <!--<div class="progress-bar  progress-bar-danger" role="progressbar" aria-valuenow="60"-->
+                        <!--aria-valuemin="0" aria-valuemax="100" style="width:60%;">-->
+                        <!--60%-->
+                        <!--</div>-->
+                        <!--</div>-->
+                        <!--<b>已领75117张</b>-->
+
+                        <!-- 针对字段 如果传回数据含有很多标签，先渲染，在页面选中，直接调即可-->
+                        {{@bcjList.productCouponRemain}}
+                    </div>
+
+
+                    <div class="bcj-coupon">{{@bcjList.productCoupon}}</div>
+                    <div class="bcj-link">{{@bcjList.productHref}}</div>
+                </div>
+            </div>
+        </li>
+        {{/each}}
+    </ul>
+</script>
+<script src="/dist/js/del.js"></script>
+<script src="/src/js/wje/iscroll.js"></script>
+<script src="/dist/js/wje/bcj.js"></script>
+</body>
+</html>

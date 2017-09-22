@@ -1,0 +1,57 @@
+// 初始化
+
+
+// 去除所有默认margin,padding
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body {
+  font-size: 12px;
+  font-family: "微软雅黑";
+}
+.fr{
+  float: right;
+}
+.fl{
+  float:left;
+}
+a{
+  // 去除a标签默认下划线
+  text-decoration:none;
+  // 设置a标签颜色 跟随父元素改变
+  color:inherit;
+  // 转为块级元素，扩大响应区域
+  display:block;
+  width: 100%;
+}
+h1,h2,h3{
+  font-weight: normal;
+}
+img{
+  // 去除图片默认的3px
+  display:block;
+  width: 100%;
+}
+input{
+  display:block;
+  outline:none;
+  border:none;
+  width: 100%;
+  height: 100%;
+}
+ul{
+  list-style:none;
+}
+// 清除浮动
+//清除浮动::before没用
+.clearfix::after{
+  display:block;
+  content:"";
+  height: 0;
+  clear:both;
+  line-height:0;
+  visibility:hidden;
+}

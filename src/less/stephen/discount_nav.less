@@ -1,0 +1,181 @@
+@import "base.less";
+
+
+  // 优惠券头部
+.discount_nav_header{
+  height: 50px;
+  line-height: 50px;
+  background:#f4483e;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  a{
+    color: #fff;
+    i{
+      font-size: 18px;
+    }
+    span{
+      display: inline-block;
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 50px;
+      text-align: center;
+      width: 80%;
+    }
+    img{
+      width: 50px;
+      height:50px;
+      float: right;
+    }
+  }
+} 
+
+  // 点餐前
+  .discount_nav_front{
+    p{
+      font-size: 12px;
+      text-align: center;
+      color: #999;
+      margin: 8px auto;
+    }
+  }
+
+  // 优惠券详细信息
+  .discount_nav_box{
+    ul{
+      li{
+        position: relative;
+        border-bottom: 1px solid #e7e7e7;
+        overflow: hidden;
+         span{
+          position: absolute;
+          top: 35%;
+          right: 0;
+          font-size: 30px;   
+          color: #e7e7e7;    
+        }
+        a{     
+              display: inline-block;
+              height: 100%;
+              width: 100%;
+              padding: 10px;
+              color: #5a5a5a;
+          .discount_nav_pic{
+                width: 100px;
+              height: 80px;
+              overflow: hidden;
+              margin-right: 10px;
+              float: left;
+            img{
+              vertical-align: middle;
+              width: 100%;
+              
+            }
+          }
+          .discount_nav_info{
+            padding-right: 30px;
+            overflow: hidden;
+            font-size: 14px;
+            line-height: 24px;
+            .discount_nav_title{
+              h3{
+                margin: 0 ;
+                word-break: break-all;
+                text-align: justify;
+                font-size: 14px;
+                font-weight: normal;
+                color: #333333;
+                line-height: 20px;
+              }
+              h2{
+                margin: 0;
+                font-size: 14px;
+                font-weight: bold;
+              }
+            }
+            .discount_nav_time{
+                 font-size: 12px;
+                  color: #EE7700;
+                   margin-top: 10px;
+            }
+          }
+        }
+       
+      }
+    }
+  }
+
+
+
+  // 优惠券菜单栏
+  .discount_nav_menu{
+    height: 36px;
+    line-height: 36px;
+    background: -webkit-gradient(linear,0 0,0 100%,from(#ffffff),to(#ebebeb));
+    margin-top: 20px;
+    background-color: #ebebeb;
+    border-top: solid 1px #ebebeb;
+    border-bottom: 1px solid #ccc;
+    padding-left: 8px;
+    font-size: 14px;
+    a{
+      display: inline-block;
+    }
+  }
+
+
+
+  /*底部*/
+    .mm_foot{
+      background-color:#efefef;
+      padding-top:10px;
+      .foot_top{
+          height: 36px;
+          border-top:1px solid #ccc;
+          border-bottom:1px solid #ccc;
+          color:#666;
+          >a{
+              float: left;
+              text-align: center;
+              line-height:36px;
+              border-right:1px solid #ccc;
+          }
+          >a:nth-child(1),a:nth-child(2){
+              width: 30%;
+          }
+          >a:nth-child(3){
+              width: 40%;
+              border-right:0;
+              >img{
+                  display:inline-block;
+                  vertical-align: middle;
+                  width: 14px;
+                  height: 14px;
+                  margin:-5px 2px 0 0;
+              }
+          }
+      }
+      .foot_footer{
+          padding:15px 0;
+          text-align: center;
+          color:#666;
+          >p:nth-child(1){
+              >a{
+                display:inline;
+              }
+              >a:nth-child(1){
+                  color:red;
+              }
+          }
+      }
+  }
+  /* 底部 固定App下载*/
+  .mm_fix{
+      width: 60px;
+      height: 68px;
+      position: fixed;
+      right: 0;
+      bottom:60px;
+      z-index: 666;
+      
+  }

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 理想视口的代码  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <title>优惠券</title>
+
+    <!--<script src="/dist/js/del.js"></script>-->
+    <script src="/dist/js/del.js"></script>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/dist/css/less/stephen/discount_nav.css">
+
+
+</head>
+
+<body>
+
+    <!--优惠券头部的坑-->
+    <div class="box"></div>
+    <!--点餐前的坑-->
+
+
+
+    <!--优惠券详细信息的坑-->
+
+
+    <!--优惠券菜单-->
+    <!--坑-->
+
+    <script id="discount_nav_tpl" type="text/tpl">
+
+        <!--优惠券头部-->
+        <div class="discount_nav_header clearfix">
+            <a href="/dist/html/stephen/discount.html">
+                <i class="glyphicon glyphicon-menu-left"></i>
+                <span>肯德基优惠券</span>
+                <img src="/public/img/header_app.png" alt="">
+            </a>
+        </div>
+
+        <!--点餐前-->
+        <div class="discount_nav_front">
+            <p>--点餐前出示手机中的优惠券，即可享受优惠--</p>
+        </div>
+
+        <!--优惠券信息-->
+        <div class="discount_nav_box clearfix">
+            <ul id="discount_info">
+                {{each $data discount_main i}}
+                <li>
+                    <span>&gt;</span>
+                    <a href="#">
+                        <div class="discount_nav_pic">
+                            {{@discount_main.couponProductImg}}
+                        </div>
+                        <div class="discount_nav_info">
+                            <div class="discount_nav_title">
+                                <h3>{{discount_main.couponProductName}}</h3>
+                                <h2>{{discount_main.couponProductPrice}}</h2>
+                            </div>
+                            <div class="discount_nav_time">{{discount_main.couponProductTime}}</div>
+                        </div>
+                    </a>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+
+        <!--优惠券菜单-->
+        <div class="discount_nav_menu">
+            <a href="/dist/html/index.jtml">首页</a>&nbsp;&gt;
+            <a href="/dist/html/stephen/discount.html">优惠券</a>&nbsp;&gt;
+            <a href="#">肯德基优惠券</a>
+
+        </div>
+
+
+
+    </script>
+
+
+    <script src="/dist/js/stephen/discount_nav.js"></script>
+
+</html>

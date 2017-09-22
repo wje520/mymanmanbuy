@@ -1,0 +1,263 @@
+@import '../base.less';
+
+body{
+  background-color: #f2f2f2;
+}
+
+.header{
+  height: 50px;
+  line-height: 50px;
+  background-color: #ff841d;
+
+  .logo{
+    height: 100%;
+    padding: 13px;
+    img{
+      width: 200px;
+    }
+  }
+  .app{
+    height: 100%;
+    position: relative;
+    a{
+      position: absolute;
+      right: 48%;
+      top: 10%;
+      img{
+        width: 42px;
+      }
+    }
+  }
+}
+
+//search
+.search{
+  background-color: #ffffff;
+  position: relative;
+  height: 51px;
+  #search{
+    border: none;
+    background: #f1f1f1;
+    margin: 0px;
+    padding: 0px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 15px;
+    width: 90%;
+    padding-left: 5%;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 16px;
+  }
+  #send{
+    background: #ff841d;
+    color: #FFFFFF;
+    border: none;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 15px;
+    position: absolute;
+    width: 60px;
+    top: 10px;
+    left: -35px;
+    font-size: 16px;
+    text-align: center;
+  }
+}
+
+//µ¼º½À¸
+.nav{
+  height: 36px;
+  background-color: #ebebeb;
+  background: -webkit-gradient(linear,0 0,0 100%,from(#ffffff),to(#ebebeb));
+  background: -moz-linear-gradient(top, #ffffff, #ebebeb);
+  background: -o-linear-gradient(top,#ffffff, #ebebeb);
+  border-top: solid 1px #ebebeb;
+  border-bottom: 1px solid #ccc;
+  line-height: 36px;
+  padding-left: 8px;
+  font-size: 14px;
+  a{
+    color: #5a5a5a;
+  }
+  a:nth-child(3){
+    display: inline-block;
+    max-width: 150px;
+    height: 100%;
+    overflow: hidden;
+    vertical-align: middle;
+  }
+}
+
+
+.show{
+  width: 100%;
+  background-color: #ffffff;
+  h1{
+    font-size: 18px;
+    color: #101010;
+    padding: 5%;
+    position: relative;
+    text-align: center;
+  }
+  img {
+    width: 35%;
+    margin: 0 auto;
+
+  }
+  h1:after{
+    content: "";
+    display: block;
+    width: 39px;
+    height: 39px;
+    background: url("/public/BiLiAndHaiTao/sc.jpg") no-repeat;
+    background-size: 39px 39px;
+    position: absolute;
+    right: 5%;
+    bottom:-25%;
+  }
+  .row{
+    height: 36px;
+    text-align: center;
+    border-top: solid 1px #c14d00;
+    border-bottom: solid 1px #c14d00;
+    a{
+      display: block;
+      height: 34px;
+      color: #fff;
+      background-color: #ffbb00;
+      box-sizing: border-box;
+      line-height: 34px;
+      font-size: 15px;
+      font-weight: 700;
+    }
+    a:nth-child(2){
+      border-left: solid 1px #c14d00;
+      border-right: solid 1px #c14d00;
+    }
+    a:focus{
+      background-color: #ffbb00;
+      background: -webkit-gradient(linear,0 0,0 100%,from(#ffa632),to(#ff9000));
+    }
+  }
+  table{
+    height: 36px;
+    font-size: 16px;
+    tr{
+      height: 100%;
+      td{
+        img{
+          width: 16px;
+          height: 16px;
+          position: relative;
+          right: -14px;
+          top: 8px;
+        }
+      }
+      td:nth-child(3){
+        color: red;
+        text-align: right;
+        padding-right: 5%;
+        box-sizing: border-box;
+      }
+    }
+
+  }
+}
+
+
+#text{
+  height: 36px;
+  border-top: 1px solid #c0c0c0;
+  border-bottom: 1px solid #c0c0c0;
+font-size: 12px;
+  color: #888;
+  padding: 8px 10px;
+  line-height: 18px;
+  box-sizing: content-box;
+}
+
+
+
+//ÆÀÂÛ
+.pinglun{
+  border-top: 4px solid #7a7a7a;
+  font-size: 12px;
+  color: #666;
+  line-height: 18px;
+  >div:nth-child(1){
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    overflow: hidden;
+    background: #dbdbdb;
+    font-size: 14px;
+    border-top: 1px solid #fff;
+  }
+  .one{
+    padding: 10px;
+    padding-bottom: 0px;
+  }
+  .two{
+    padding: 10px;
+    padding-bottom: 0px;
+    .star{
+      width: 80px;
+      height: 16px;
+      background:url("/public/BiLiAndHaiTao/star.png") left center;
+      background-size: 16px;
+    }
+  }
+  .Content{
+    padding: 10px;
+    padding-bottom: 0px;
+  }
+}
+
+/*µ×²¿*/
+.mm_foot{
+  background-color:#efefef;
+  padding-top:10px;
+  .foot_top{
+    height: 36px;
+    border-top:1px solid #ccc;
+    border-bottom:1px solid #ccc;
+    color:#666;
+    >a{
+      float: left;
+      text-align: center;
+      line-height:36px;
+      border-right:1px solid #ccc;
+    }
+    >a:nth-child(1),a:nth-child(2){
+      width: 30%;
+    }
+    >a:nth-child(3){
+      width: 40%;
+      border-right:0;
+      >img{
+        display:inline-block;
+        vertical-align: middle;
+        width: 14px;
+        height: 14px;
+        margin:-5px 2px 0 0;
+      }
+    }
+  }
+  .foot_footer{
+    padding:15px 0;
+    text-align: center;
+    color:#666;
+    >p:nth-child(1){
+      >a{
+        display:inline;
+      }
+      >a:nth-child(1){
+        color:red;
+      }
+    }
+  }
+}
+
+

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>商品评价</title>
+    <!-- <link rel="stylesheet" href="/dist/css/less/page-fa/main.css"> -->
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/dist/css/less/stephen/grade.css">
+</head>
+
+<body>
+    <!-- 外层 -->
+    <div class="view">
+        <!--顶部 logo-->
+        <div class="mm_header">
+            <div class="fl mm_logo">
+                <a href="/dist/index.html" title="慢慢买比价网--手机版">
+                    <img src="/public/img/header_logo.png" alt="慢慢买比价网--手机版" />
+                </a>
+            </div>
+            <div class="fr appdown">
+                <a href="javascript:;">
+                    <img src="/public/img/header_app.png" alt="手机app下载">
+                </a>
+            </div>
+        </div>
+        <!--头部搜索框-->
+        <div class="mm_search">
+            <div class="search_txt">
+                <input type="text" placeholder="请输入你想比价的商品" class="in_1">
+                <input type="submit" value="搜索" class="in_2">
+            </div>
+        </div>
+
+
+
+
+        <!--用户评论标题-->
+        <div class="mm_grade">
+            <!-- 用户评论标题模板 -->
+        </div>
+
+        <!-- 我要评价 -->
+
+        <div class="pj_title">我要评价</div>
+        <div class="mm_pj">
+            <div class="pj_txt">
+                <input type="text" placeholder="慢慢买网友124***0">
+            </div>
+            <div class="pj_icon">
+                <ul class="clearfix">
+                    <li><input type="radio" name="c">
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                    </li>
+                    <li><input type="radio" name="c">
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                    </li>
+                    <li><input type="radio" name="c">
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                    </li>
+                    <li><input type="radio" name="c">
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                    </li>
+                    <li><input type="radio" name="c">
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="pj_area">
+                <textarea name="" id="" rows="3"></textarea>
+            </div>
+            <div class="pj_sbm">
+                <input type="submit" value="提交点评">
+            </div>
+        </div>
+
+
+
+        <!-- 底部 -->
+        <div class="mm_foot">
+            <div class="foot_top clearfix">
+                <a href="javascript:;">登录</a>
+                <a href="javascript:;">注册</a>
+                <a href="#">
+                    <img src="/public/img/top.jpg" alt=""> 返回顶部
+                </a>
+            </div>
+            <div class="foot_footer">
+                <p>
+                    <a href="javascript:;">手机APP下载</a>
+                    <a href="javascript:;">慢慢买手机版</a> -- 掌上比价平台
+                </p>
+                <p> m.manmanbuy.com </p>
+            </div>
+        </div>
+        <!-- 底部 固定App下载 -->
+        <div class="mm_fix">
+            <a href="javascript:;">
+                <img src="/public/img/manmanbuydownload.png" alt="">
+            </a>
+        </div>
+    </div>
+    <script type="text/template" id="mm_grade_tpl">
+        <div class="grade_title">
+            {{comName}}
+        </div>
+        <div class="grade_icon">
+            <span class="glyphicon glyphicon-star"></span>
+            <span class="glyphicon glyphicon-star"></span>
+            <span class="glyphicon glyphicon-star"></span>
+            <span class="glyphicon glyphicon-star"></span>
+            <span class="glyphicon glyphicon-star"></span>
+        </div>
+        <div class="grade_time">
+            <p> {{comContent}}</p>
+            <p>发布时间 : {{comTime}}</p>
+            <p><a href="javascript:;">查看该商品的所有3095条评价>></a></p>
+        </div>
+    </script>
+    <script src="/dist/js/del.js"></script>
+    <script src="/dist/js/stephen/grade.js"></script>
+</body>
+
+</html>
